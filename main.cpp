@@ -3,10 +3,11 @@ using namespace std;
 
 // FUNÇÃO COM OS PONTEIROS DA PRIMEIRA PARTE DA ATIVIDADE
 
-void ImprimeMaxEMin (){
-int *PonteiroInt, *PonteiroMax, *PonteiroMin;
-  int Numeros[10], i, Max, Min;
-  
+void ImprimeMaxEMin (int Max, int Min){
+int *PonteiroMax, *PonteiroMin;
+  int i ;
+  int  Numeros[10]={}, *PonteiroInt;
+
   PonteiroInt = Numeros;
 
 //INICIALIZANDO AS VARIÁVEIS DE MÁXIMO E MÍNIMO COM O PRIMEIRO ELEMENTO DO ARRAY
@@ -21,6 +22,7 @@ int *PonteiroInt, *PonteiroMax, *PonteiroMin;
   if (Numeros[i]>Max){
       Max=Numeros[i];
       PonteiroMax= &Max;
+      
   }else if (Numeros[i]<Min) {
        Min=Numeros[i];
       PonteiroMin= &Min;
@@ -32,10 +34,6 @@ int *PonteiroInt, *PonteiroMax, *PonteiroMin;
    cout<<"Endereço do vetor: "<< PonteiroInt <<endl;
    cout<<"Endereço do Maximo: "<< PonteiroMax <<endl;
    cout<<"Endereço do Minimo: "<< PonteiroMin <<endl;
-
-   cout<<"O maior número neste vetor é: "<< Max <<endl;
-   cout<<"O menor número neste vetor é: "<< Min <<endl;
-  
   
    }
   
@@ -44,16 +42,20 @@ int *PonteiroInt, *PonteiroMax, *PonteiroMin;
 
 int main() {
 
-   int Numeros[10], i;
+   int Numeros[10], i, Maior, Menor;
 
 //SOLICITAÇÃO DOS DADOS AO USUÁRIO
 
-  cout<< "digite um conjunto de números: "<<endl;
+  cout<< "digite  números: "<<endl;
   cin>>Numeros[i];
-  cout<< "vetor digitado:  " << Numeros[i]<<endl;
+  cout<< "a sequencia digitada foi: " << Numeros[i]<<endl; 
 
 //CHAMANDO A FUNÇÃO PARA ATIVAR OS PARÂMETROS SOLICITADOS NA ATIVIDADE 2
 
-  ImprimeMaxEMin();
+  ImprimeMaxEMin(Maior ,Menor);
+
+cout<<"O maior número neste vetor é: "<< Maior <<endl;
+cout<<"O menor número neste vetor é: "<< Menor <<endl;
+
 }
 
