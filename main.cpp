@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-bool ParametroEntrada (){
+void ParametroEntrada (){
 
   int *PonteiroInt, *PonteiroMax, *PonteiroMin;
   int Numeros[0], i;
@@ -14,13 +14,14 @@ bool ParametroEntrada (){
     *PonteiroMin = Numeros[i];
 
   }
- return ParametroEntrada();
+ 
   
  }
 
 
 int main() {
 
+int *PonteiroInt, *PonteiroMax, *PonteiroMin;
   int Numeros[0], i;
   ParametroEntrada();
 
@@ -28,8 +29,4 @@ int main() {
   cin>>Numeros[i];
   cout<< "vetor digitado:  " << Numeros[i]<<endl;
   
-  
-  
-
-
 }
