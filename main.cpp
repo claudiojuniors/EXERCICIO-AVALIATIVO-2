@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void ImprimeMaxEMin (int *PonteiroMax, int *PonteiroMin){
+void ImprimeMaxEMin (){
 
   int *PonteiroInt, *PonteiroMax, *PonteiroMin;
   int Numeros[0], i, Max, Min;
