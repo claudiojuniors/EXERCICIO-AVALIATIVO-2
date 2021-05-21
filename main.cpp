@@ -1,32 +1,37 @@
 #include <iostream>
 using namespace std;
 
-void ParametroEntrada (){
+void ImprimeMaxEMin (int *PonteiroMax, int *PonteiroMin){
 
   int *PonteiroInt, *PonteiroMax, *PonteiroMin;
-  int Numeros[0], i;
+  int Numeros[0], i, Max, Min;
   
   *PonteiroInt = Numeros[i];
-
-  if (Numeros[i]>Numeros[i+1]){
-    *PonteiroMax= Numeros[i];
-  }else {
-    *PonteiroMin = Numeros[i];
-
-  }
  
+  for (int i=0; i<10; i++){
+
+  if (Numeros[i]>Max){
+      Max=Numeros[i];
+      PonteiroMax= &Max;
+  }else {
+       Min=Numeros[i];
+      PonteiroMin= &Min;
+
+     }
+   }
   
  }
 
 
 int main() {
 
-int *PonteiroInt, *PonteiroMax, *PonteiroMin;
   int Numeros[0], i;
-  ParametroEntrada();
+  
 
   cout<< "digite um conjunto de números: "<<endl;
   cin>>Numeros[i];
   cout<< "vetor digitado:  " << Numeros[i]<<endl;
   
+  ImprimeMaxEMin();
 }
+
