@@ -6,15 +6,18 @@ bool ParametroEntrada (){
   int *PonteiroInt, *PonteiroMax, *PonteiroMin;
   int Numeros[0], i;
   
+  *PonteiroInt = Numeros[i];
 
   if (Numeros[i]>Numeros[i+1]){
     *PonteiroMax= Numeros[i];
-  }else{
+  }else {
     *PonteiroMin = Numeros[i];
 
   }
- return 0;
-}
+ return ParametroEntrada();
+  
+ }
+
 
 int main() {
 
