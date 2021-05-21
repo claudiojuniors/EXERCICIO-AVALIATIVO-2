@@ -1,18 +1,25 @@
 #include <iostream>
 using namespace std;
 
-void ParametroEntrada (){
+bool ParametroEntrada (){
 
   int *PonteiroInt, *PonteiroMax, *PonteiroMin;
-  int NumeroDeElementos, Numeros[0];
-
+  int Numeros[0], i;
   
 
+  if (Numeros[i]>Numeros[i+1]){
+    *PonteiroMax= Numeros[i];
+  }else{
+    *PonteiroMin = Numeros[i];
+
+  }
+ return 0;
 }
 
 int main() {
 
   int Numeros[0], i;
+  ParametroEntrada();
 
   cout<< "digite um conjunto de números: "<<endl;
   cin>>Numeros[i];
