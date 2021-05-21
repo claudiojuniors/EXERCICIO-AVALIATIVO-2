@@ -2,27 +2,12 @@
 using namespace std;
 
 void ImprimeMaxEMin (){
-
-  
-   }
-  
- 
-
-
-int main() {
-
-  int *PonteiroInt, *PonteiroMax, *PonteiroMin;
-  int Numeros[0], i, Max=Numeros[0], Min=Numeros[0];
-
-  cout<< "digite um conjunto de números: "<<endl;
-  cin>>Numeros[i];
-  cout<< "vetor digitado:  " << Numeros[i]<<endl;
-  
- 
+int *PonteiroInt, *PonteiroMax, *PonteiroMin;
+  int Numeros[10], i, Max, Min;
   
   PonteiroInt = Numeros;
- 
-  for (int i=0; i<10; i++){
+  Max=Numeros[0];
+  for (int i=1; i<10; i++){
 
   if (Numeros[i]>Numeros[i+1]){
       Max=Numeros[i];
@@ -40,5 +25,21 @@ int main() {
 
    cout<<"O maior número neste vetor é: "<< Max <<endl;
    cout<<"O menor número neste vetor é: "<< Min <<endl;
+  
+   }
+  
+ 
+
+
+int main() {
+
+   int Numeros[10], i;
+
+  cout<< "digite um conjunto de números: "<<endl;
+  cin>>Numeros[i];
+  cout<< "vetor digitado:  " << Numeros[i]<<endl;
+
+
+  ImprimeMaxEMin();
 }
 
