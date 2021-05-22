@@ -1,12 +1,11 @@
 #include <iostream>
-#include <vector>
 #include <stdio.h>
 #include <stdlib.h>
 using namespace std;
 
 // FUNÇÃO COM OS PONTEIROS DA PRIMEIRA PARTE DA ATIVIDADE
 
-void ImprimeMaxEMin (int Max, int Min){
+void ImprimeMaxEMin (int &Max, int &Min){
 int *PonteiroMax, *PonteiroMin;
   int i ;
   int  Numeros[10]={}, *PonteiroInt;
@@ -27,19 +26,20 @@ int *PonteiroMax, *PonteiroMin;
       PonteiroMax= &Max;
       
       
-  }else if (Numeros[i]<Min) {
+  }else  {
        Min=Numeros[i];
       PonteiroMin= &Min;
 
      }
    }
+  
 //ÁREA DE IMPRESSÃO DOS RESULTADOS ENCONTRADOS
 
    cout<<"Endereço do vetor: "<< PonteiroInt <<endl;
    cout<<"Endereço do Maximo: "<< PonteiroMax <<endl;
    cout<<"Endereço do Minimo: "<< PonteiroMin <<endl;
   
-   }
+}
   
  
 //FUNÇÃO PRINCIPAL
@@ -60,7 +60,10 @@ cout<< "posição: " << i << "= "<< Numeros[i]<<endl;
 
 //CHAMANDO A FUNÇÃO PARA ATIVAR OS PARÂMETROS SOLICITADOS NA ATIVIDADE 2
 
-  ImprimeMaxEMin(Maior ,Menor);
+//ImprimeMaxEMin(Max, Min);
+
+
+ ImprimeMaxEMin( Maior ,Menor);
 
 cout<<"O maior número neste vetor é: "<< Maior <<endl;
 cout<<"O menor número neste vetor é: "<< Menor <<endl;
