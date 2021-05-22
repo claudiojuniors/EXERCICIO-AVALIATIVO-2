@@ -1,4 +1,7 @@
 #include <iostream>
+#include <vector>
+#include <stdio.h>
+#include <stdlib.h>
 using namespace std;
 
 // FUNÇÃO COM OS PONTEIROS DA PRIMEIRA PARTE DA ATIVIDADE
@@ -23,6 +26,7 @@ int *PonteiroMax, *PonteiroMin;
       Max=Numeros[i];
       PonteiroMax= &Max;
       
+      
   }else if (Numeros[i]<Min) {
        Min=Numeros[i];
       PonteiroMin= &Min;
@@ -45,10 +49,14 @@ int main() {
    int Numeros[10], i, Maior, Menor;
 
 //SOLICITAÇÃO DOS DADOS AO USUÁRIO
+for (int i=0; i<10; i++){
+  cout<< "digite um número: "<<endl;
+  cin>>Numeros[i];  
+}
 
-  cout<< "digite  números: "<<endl;
-  cin>>Numeros[i];
-  cout<< "a sequencia digitada foi: " << Numeros[i]<<endl; 
+for (int i=0; i<10; i++){
+cout<< "posição: " << i << "= "<< Numeros[i]<<endl;
+}
 
 //CHAMANDO A FUNÇÃO PARA ATIVAR OS PARÂMETROS SOLICITADOS NA ATIVIDADE 2
 
